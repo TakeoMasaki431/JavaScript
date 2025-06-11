@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+   <div>
+   <h3>Display Message if number is in Range</h3>
+   <p>Click the below button to enter number.</p>
+   <button onclick="display()"> click me
+   </button>
+   <p id="message"></p>
+   </div>
+   <script>
+      function display() {
+         const number = prompt('Please enter a number:');
+         if (number >= 1 && number <= 10)
+            document.getElementById("message").innerHTML = number + " is in range";
+         else
+            document.getElementById("message").innerHTML = number + " is not in range";
+      }
+   </script>
+</body>
+</html>

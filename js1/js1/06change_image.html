@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Αλλαγή Εικόνας</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            display: inline-block;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Πάτα το κουμπί για αλλαγή εικόνας</h1>
+    <div id="images">
+        <img class="image" src="https://picsum.photos/100" alt="Εικόνα 1"> <br><img class="image" src="https://picsum.photos/100" alt="Εικόνα 2">
+	    <img class="image" src="https://picsum.photos/100" alt="Εικόνα 3">
+        <img class="image" src="https://picsum.photos/100" alt="Εικόνα 4">
+    </div>
+    <button id="changeImage">Αλλαγή Εικόνας</button>
+
+    <script>
+        const images = document.querySelectorAll(".image");
+        const button = document.getElementById("changeImage");
+
+        button.addEventListener("click", function() {
+            images.forEach(image => {
+                let id = Math.floor(Math.random() * 256);
+                const link = "https://picsum.photos/";
+                const newImage = link.concat(id);
+                image.src = newImage;
+            });
+        });
+    </script>
+
+</body>
+</html>

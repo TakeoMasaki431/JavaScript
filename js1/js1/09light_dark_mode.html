@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light/Dark Mode</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background: #333;
+            color: white;
+        }
+        .brown-yellow-mode {
+            background: yellow;
+            color: brown;
+        }
+		.yellow-brown-mode {
+            background: brown;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Light / Dark Mode</h1>
+    <button id="toggleMode">Εναλλαγή</button>
+	
+	<h1>Yellow / Brown</h1>
+    <button id="toggleMode2">Εναλλαγή</button>
+	
+	<h1>Brown / Yellow</h1>
+    <button id="toggleMode3">Εναλλαγή</button>
+
+    <script>
+        const button1 = document.getElementById("toggleMode");
+
+        button1.addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+        });
+		
+        const button2 = document.getElementById("toggleMode2");
+
+        button2.addEventListener("click", function() {
+            document.body.classList.toggle("brown-yellow-mode");
+        });
+		
+		const button3 = document.getElementById("toggleMode3");
+
+        button3.addEventListener("click", function() {
+            document.body.classList.toggle("yellow-brown-mode");
+        });
+    </script>
+
+</body>
+</html>

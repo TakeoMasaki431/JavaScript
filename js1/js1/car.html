@@ -1,0 +1,18 @@
+<html>
+<body>
+	<p>Car Information</p>
+	<p id = "output"> </p>
+	<script>
+		const car = {
+		   carName: "Suzuki",
+		   carYear: "2005",
+		   carModel: "Hybrid",
+
+			getInfo: function () {
+				return "carName: " + this.carName +"<br>carYear: " + this.carYear + "<br>carModel: " + this.carModel;
+			},
+		}
+		document.getElementById("output").innerHTML = car.getInfo();
+	</script>
+</body>
+</html>
